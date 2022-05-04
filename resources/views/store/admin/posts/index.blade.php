@@ -16,7 +16,7 @@
                             <p class="card-text">{{ $item->description }}</p>
                             <p class="card-text"><small class="text-muted">{{ $item->created_at }}</small></p>
                             <a href="{{ route('store.admin.posts.edit', $item->id) }}" class="btn btn-primary" style="margin-bottom: 5px">Редактировать</a><br>
-                            <a href="{{ route('store.comment.create', $item->instrument_id) }}" class="btn btn-primary" style="margin-bottom: 5px">Комментировать</a><br>
+                            <a href="{{ route('store.comment.create', $item->id) }}" class="btn btn-primary" style="margin-bottom: 5px">Комментировать</a><br>
                             <a href="{{ route('store.admin.posts.show', $item->id) }}" class="btn btn-primary" style="margin-bottom: 5px">Посмотреть все комментарии</a><br>
                         </div>
                     </div>
