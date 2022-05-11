@@ -16,28 +16,25 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="card-title"></div>
-                                    <div class="card-subtitle mb-2 text-muted"></div>
-                                    <div class="tab-content" id="nav-tabContent">
-                                        <div class="tab-pane fade show active" id="maindata" role="tabpanel"
-                                             aria-labelledby="nav-maindata-tab">
-                                            <div class="form-group">
-                                                <label for="user_name">Ваше имя</label>
-                                                <input name="user_name" value="{{ $item->user_name }}"
-                                                       id="user_name"
-                                                       type="text"
-                                                       class="form-control"
-                                                       minlength="3"
-                                                       required>
-                                            </div>
+                                    <div class="tab-pane fade show active" id="maindata" role="tabpanel"
+                                         aria-labelledby="nav-maindata-tab">
+                                        <div class="form-group">
+                                            <label for="user_name">Ваше имя</label>
+                                            <input name="user_name" value="{{ $item->user_name }}"
+                                                   id="user_name"
+                                                   type="text"
+                                                   class="form-control"
+                                                   minlength="3"
+                                                   required>
+                                            <input type="hidden" value="{{ $instrument_id }}">
+                                        </div>
 
-                                            <div class="form-group">
-                                                <label for="message">Текст</label>
-                                                <textarea name="message" value="{{ $item->message }}"
-                                                          id="message"
-                                                          class="form-control"
-                                                          rows="10">{{ old('message', $item->message) }}</textarea>
-                                            </div>
+                                        <div class="form-group">
+                                            <label for="message">Текст</label>
+                                            <textarea name="message" value="{{ $item->message }}"
+                                                      id="message"
+                                                      class="form-control"
+                                                      rows="10">{{ old('message', $item->message) }}</textarea>
                                         </div>
                                     </div>
                                 </div>

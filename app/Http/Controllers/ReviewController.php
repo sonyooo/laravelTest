@@ -24,13 +24,12 @@ class ReviewController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(MusicInstrument $instrument_id)
     {
         $item = new MusicReview();
         $reviewList = MusicReview::all();
-
         return view('store.posts.edit',
-            compact('item', 'reviewList'));
+            compact('item', 'reviewList', 'instrument_id'));
     }
 
     /**
@@ -43,6 +42,7 @@ class ReviewController extends Controller
     {
         $data = $request->input();
         $item = new MusicReview($data);
+        dd($item);
         $item->save();
     }
 

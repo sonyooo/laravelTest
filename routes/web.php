@@ -41,8 +41,9 @@ $reviewData = [
     'prefix' => 'store/comment'
 ];
 Route::group($reviewData, function() {
-    $methods = ['index', 'edit', 'update', 'create', 'store'];
+    $methods = ['index', 'edit', 'update', 'store'];
     Route::resource('posts', 'App\Http\Controllers\ReviewController')
         ->only($methods)
         ->names('store.comment');
 });
+Route::get('/admin/store/posts/create/{instrument_id}', [App\Http\Controllers\ReviewController::class, 'create'])->name('store.comment.create');
